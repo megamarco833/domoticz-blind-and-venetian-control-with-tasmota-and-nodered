@@ -83,7 +83,7 @@ same rules to control wall switch like example with esp8266 and same commands to
     where in the example "tap1_esp32_ip56" etc are the domoticz name of shutters dummy devices that you want to control simmultaneously.
     
 6) create a script in Dzvents to manage the "master" dummy device that will controll multiple blind simmultaneously
-     see code for dzvent script => `master_blnd.lua`
+     see code for dzvent script => `master_blind.lua`
 		 
 7) create the nodered flow to allow comunication between tasmota firmware and domoticz
      `flows_blinds.json`
