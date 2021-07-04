@@ -60,9 +60,13 @@ rules to manage wall switches:
 inside tasmota console insert:
 
 `rule1 on switch1#state=2 do backlog ShutterStop1; ShutterChange1 3 endon on switch1#state=3 do ShutterOpen1 endon on switch2#state=2 do backlog ShutterStop1; ShutterChange1 -3 endon on switch2#state=3 do ShutterClose1 endon on switch3#state=2 do backlog ShutterStop2; ShutterChange2 3 endon on switch3#state=3 do ShutterOpen2 endon on switch4#state=2 do backlog ShutterStop2; ShutterChange2 -3 endon on switch4#state=3 do ShutterClose2 endon`
+
+to enable rule1 :
 `rule1 1`
 
 `rule2 on switch5#state=2 do backlog ShutterStop3; ShutterChange3 3 endon on switch5#state=3 do ShutterOpen3 endon on switch6#state=2 do backlog ShutterStop3; ShutterChange3 -3 endon on switch6#state=3 do ShutterClose3 endon on switch7#state=2 do backlog ShutterStop4; ShutterChange4 3 endon on switch7#state=3 do ShutterOpen4 endon on switch8#state=2 do backlog ShutterStop4; ShutterChange4 -3 endon on switch8#state=3 do ShutterClose4 endon`
+
+to enable rule2:
 `rule2 1`
 
 4.1) setup for tasmota with esp32 +  4 shutters (8ch relay + 8 wall swithces)
@@ -87,6 +91,11 @@ same rules to control wall switch like example with esp8266 and same commands to
 		 
 7) create the nodered flow to allow comunication between tasmota firmware and domoticz
      `flows_blinds.json`
+     
+     7.1) inside the flow there are comments to help on filling flows.
+     remember that:
+     - from tasmota to domoticz => you must copy paste every flow for every blind that you want to control, you have to modiify the blind<x> function to add number of IDX on domoticz, you have to modify the topic and shutter number on mqtt_in block of every node.
+      - from domoticz to tasmota => no modification are been requeted.
  
     
     
