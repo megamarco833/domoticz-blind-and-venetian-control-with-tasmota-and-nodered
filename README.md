@@ -113,9 +113,10 @@ same rules to control wall switch like example with esp8266 and same commands to
     
 # 6) create a script in Dzvents to manage the "master" dummy device that will controll multiple blind simmultaneously
   see code for dzvent script => `master_blind.lua`
-  note: this is a Dzvents script NOT lua. On domoticz go in: configuration -> more options -> events
-  then click on "+" and Dzvents -> All 
-  and upload the script 
+  
+note: this is a Dzvents script NOT lua. On domoticz go in: configuration -> more options -> events
+then click on "+" and Dzvents -> All 
+and upload the script 
 		 
 # 7) create the nodered flow to allow comunication between tasmota firmware and domoticz
      `flows_blinds.json`
